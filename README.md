@@ -4,31 +4,31 @@ My solutions to coding interview problems on leetcode, educative and other inter
 
 - [ ] Sieve
 - [ ] Catalan Numbers
-- [x] Sliding Window Technique
+- [ ] Sliding Window Technique
 - [ ] Recursion and Backtracking 
 - [ ] Binary Search [(TopCoder)](https://www.topcoder.com/community/competitive-programming/tutorials/binary-search)
 - [ ] BacktoBackSWE Playlist
-- [x] Tortoise and Hare Pointer 
+- [ ] Tortoise and Hare Pointer 
 
 ## Trees
 
-- [x] Flatten Tree
-- [x] Height of Tree
-- [x] Iterative Traversals
-- [x] Lowest Common Ancestor
-- [x] Level Order Traversal
-- [x] Diameter of a Binary Tree
-- [x] Recursive Traversals
-- [x] Diagonal Traversal
-- [x] Vertical Traversal
-- [x] Serialize and Deserialize Trees
-- [x] Other BackToBackSWE Ones
+- [ ] Flatten Tree
+- [ ] Height of Tree
+- [ ] Iterative Traversals
+- [ ] Lowest Common Ancestor
+- [ ] Level Order Traversal
+- [ ] Diameter of a Binary Tree
+- [ ] Recursive Traversals
+- [ ] Diagonal Traversal
+- [ ] Vertical Traversal
+- [ ] Serialize and Deserialize Trees
+- [ ] Other BackToBackSWE Ones
 
 ## Graphs
 
-- [x] BFS Problems
+- [ ] BFS Problems
 - [ ] Graph coloring/Bipartition
-- [x] DFS Problems
+- [ ] DFS Problems
 - [ ] Topological Sort
 - [ ] Union Find
 - [ ] Find Shortest Path (Dijkstra's/Bellman Ford
@@ -51,22 +51,22 @@ My solutions to coding interview problems on leetcode, educative and other inter
 
 ## Linked Lists
 
-- [x] Insert
-- [x] Delete Nth Node
-- [x] Reverse
-- [x] Merge Two Sorted Linked List
-- [x] Fast Pointer, Slow Pointer technique
+- [ ] Insert
+- [ ] Delete Nth Node
+- [ ] Reverse
+- [ ] Merge Two Sorted Linked List
+- [ ] Fast Pointer, Slow Pointer technique
 - [ ] Doubly Linked List
 - [ ] BackToBackSWE Playlist
 
 ## Hashing
 
-- [x] Various Types of Hashing
+- [ ] Various Types of Hashing
 
 ## Bit Manipulation
 
-- [x] Basics
-- [x] BitMasking
-- [x] Powerset and Find tha nums
+- [ ] Basics
+- [ ] BitMasking
+- [ ] Powerset and Find tha nums
 
 # One Month Challenge :')
