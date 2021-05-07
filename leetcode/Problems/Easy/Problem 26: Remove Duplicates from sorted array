@@ -1,0 +1,24 @@
+// Programing Language: Java
+// I used two pointers and solved the problem. 
+// I placed the two pointers a,b initially at 0 position.
+// I traversed the loop till the end.
+// When a !=b then I changed the position of b to a+1 and incremented a.
+// Finally I returned the value of a +1 ;
+
+
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int a = 0;
+        
+        for(int b=1; b<nums.length; b++){
+            if(nums[a] != nums[b]){
+                nums[a+1] = nums[b];
+                a++;
+            }
+            
+            
+        }
+        return a + 1;
+    }
+}
