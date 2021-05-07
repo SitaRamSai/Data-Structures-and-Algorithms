@@ -1,8 +1,8 @@
 //First take two variables min and max. min = the first element in the array. Max to be 0 bcoz when we don’t find any max we have to return 0.
 
-//Traverse the list and check if min > the traversed element. If min is greater than change the min value. 
+//Traverse the list and check if min > the traversed element. If min is greater then change the min value. 
 
-//Else take the maximum value from the max we have and the element -min value. 
+//Else take the maximum value from the max we have and the element - min value. 
 
 
   class Solution {
