@@ -1,0 +1,22 @@
+//First take two variables min and max. min = the first element in the array. Max to be 0 bcoz when we don’t find any max we have to return 0.
+
+//Traverse the list and check if min > the traversed element. If min is greater than change the min value. 
+
+//Else take the maximum value from the max we have and the element -min value. 
+
+
+  class Solution {
+  public int maxProfit(int[] prices) {
+      int min = prices[0], max =0;
+
+      for(int i=1; i<prices.length; i++){
+          if(min>prices[i]){
+              min = prices[i];
+
+      } else { 
+          max = Math.max(max, prices[i]-min);    
+      }
+      }
+      return max;
+  }
+  }
