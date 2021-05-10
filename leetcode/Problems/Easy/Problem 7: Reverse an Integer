@@ -1,0 +1,27 @@
+//  Integer.MAX_VALUE = 2147483647
+//	Integer.MIN_VALUE = -2147483648
+//	This is a little tricky question. 
+//	We need to reverse an Integer with a condition. 
+//	If the Integer is -123 then we have to reverse it as -321. 
+//	The key concept here is 1) Take the modulus of the integer then we get the last digit. 
+//	Then divide the number by 10 then we get the first two digits.
+//	Pass the first two digits again to continue the process.
+//  The final reverse integer will be rev = rev * 10 + pop;
+
+
+class Solution {
+    public int reverse(int x) {
+        
+        int rev = 0;
+        
+        while(x!=0){
+            int pop = x % 10; 
+            x = x/10;         
+            
+          if (rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 && pop > 7)) return 0;
+            if (rev < Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE / 10 && pop < -8)) return 0;
+            
+            rev = rev * 10 + pop; 
+        }
+     }
+  }
