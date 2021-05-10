@@ -1,0 +1,27 @@
+//  Used for loop instead of while loop
+//  Took two pointers first and last. Another temp variable to store the first character in the list
+//  Traversing the loop from s.length-1 until first
+//  Stopping the loop if first < last
+//  Swapping the first element with the last element
+//  Changing the last element with the temp value as we stored the first variable in it. 
+
+  class Solution {
+      public void reverseString(char[] s) {
+
+
+          int first = 0;
+
+
+          for(int last = s.length-1; last >= first; last--){
+
+              char temp = s[first];
+
+              if(last > first){
+                  s[first++] = s[last];
+                  s[last] = temp;
+
+              }  
+          }
+      }
+
+  }
