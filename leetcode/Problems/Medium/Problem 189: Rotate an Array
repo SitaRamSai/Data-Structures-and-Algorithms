@@ -1,0 +1,25 @@
+//	In order to rotate the array we need to find the modulus so that we can get the steps.
+//	After that first reverse the existing array.
+//	Again reverse the elements up to K.
+//	Again reverse the elements from K to end. 
+// This way we can achieve to rotate the array. 
+
+class Solution {
+  public void rotate(int[] nums, int k) {
+   
+      k = k % nums.length;
+      
+      reverse(nums, 0, nums.length-1);
+      
+      reverse(nums, 0, k-1);
+      
+      reverse(nums, k, nums.length-1);
+      }
+      public void reverse(int[]nums, int start, int end){
+          while(start < end){
+              int temp = nums[start];
+              nums[start++] = nums[end];
+              nums[end--] = temp;
+          }
+      }
+  }
