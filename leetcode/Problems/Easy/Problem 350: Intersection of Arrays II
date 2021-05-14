@@ -1,0 +1,71 @@
+//	Approach 1: Using HashMap and ArrayList
+	
+//	First Crete a hashmap and ArrayList with Integer data type
+//	Traverse the first array and save the count in the map.
+//	Now Traverse the second array, check if the element exists in the map and if the count is more than zero then copy that element into the array list. 
+//	After copying reduce the count so that we know we have copied the intersecting element. 
+//	Create a new array of size equal to array list size.
+//  Traverse the array list and copy the elements into the new array. 
+
+            class Solution {
+            public int[] intersect(int[] nums1, int[] nums2) {
+
+                Map<Integer, Integer> m = new HashMap<>();
+
+                for(int i: nums1){
+                    m.put(i, m.getOrDefault(i,0)+1);
+                }
+
+                List<Integer> l = new ArrayList<>();
+
+                for(int i: nums2){
+                    if(m.containsKey(i) && m.get(i) > 0){
+                        l.add(i);
+                        m.put(i, m.getOrDefault(i,0) - 1);
+                    }
+                }
+
+                int[] res = new int[l.size()];
+                int ix =0;
+                for(int i: l){
+                    res[ix++] = i;
+                }
+
+                return res;
+            }
+        }
+
+//	Approach 2: Using Sorting
+	
+//	First Sort the given two arrays.
+//	Then take three variables I, j, k = 0.
+//	Traverse the arrays until I < nums1.length and j < nums2.length with a while loop.
+//	Now if the first element in array 1 is greater than the element in array2 then increment I, else if increment j.
+//	If they are equal then copy that element into the array1's first position and then increment j.
+//	Here we are incrementing the respective variables because to check the different elements until they are equal. 
+//	After sucessfully travesing the elements in both the arrays we now have the intersecting elements in the array1 from position 1 to k.
+//  Using Arrays.copyOfRange() method we return the array until k elements to get the intersecting values. 
+
+
+          class Solution {
+          public int[] intersect(int[] nums1, int[] nums2) {
+
+              Arrays.sort(nums1);
+              Arrays.sort(nums2);
+
+              int i = 0, j = 0, k = 0;
+
+              while(i < nums1.length && j < nums2.length){
+                  if(nums1[i] < nums2[j]){
+                      ++i;
+                  } else if(nums1[i] > nums2[j]){
+                      ++j;
+                  } else{
+                      nums1[k++] = nums1[i++];
+                      ++j;
+                  }
+
+              }
+              return Arrays.copyOfRange(nums1, 0, k);
+          }
+      }
