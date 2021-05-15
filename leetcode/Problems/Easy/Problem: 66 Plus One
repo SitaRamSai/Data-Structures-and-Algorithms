@@ -1,0 +1,46 @@
+//	Here we have to traverse the list and add 1 to the last element. 
+//	We have to consider two approches here.
+//		1. If the last element is 9 then we have to also change the previous element
+//		2. If it is not equal to 9 then we can add +1 to it and we can directly return the value. 
+//	So let's say we have all the elements to be 9 then in that case we have to create a new array and add the starting number to be 1. Because 999 +1 will be 1000. 
+	
+//	So, First traverse the array from the last
+//	If the element is 9 then change the value to zero and continue the loop by decreasing the count. 
+//	If you reach any non 9 element then add +1 to it and return the value. 
+//  If you find every number to be 9 then create a new array and add first element to be 1 and return the new array. 
+
+
+      class Solution {
+      public int[] plusOne(int[] digits) {
+        
+        
+        //Taking the count of the array
+        int n = digits.length;
+        
+        //Traversing the array from the last. 
+        for(int i = n-1; i >= 0; --i){
+           
+           //If the last element is 9 then change it with zero
+           if(digits[i] == 9){
+                digits[i] = 0;
+            } 
+            
+            //If it is not 9 then increment and return the array. 
+            else {
+                digits[i]++; 
+                return digits;
+            }    
+        }
+        
+        //If our code didn't make it to the else loop then we this part of code will execute. 
+        digits = new int[n+1];
+        digits[0] = 1;
+        return digits;
+    }
+} 
+
+
+
+Time Complexity: As we are using only 1 for loop it should take O(n) to complete the task. 
+Space Complexity: 0(n) as we are performing an in array modification. Only we are creating a new array with n+1 elements if the case is all the numbers to be nine. 
+                  So, anyway O(n) would be the space complexity. 
