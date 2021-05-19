@@ -72,6 +72,6 @@ My solutions to coding interview problems on leetcode, educative and other inter
 # One Month Challenge :')
 
 Solved:
-Easy - 2
-Medium - 0
+Easy - 9
+Medium - 1
 Hard - 0
