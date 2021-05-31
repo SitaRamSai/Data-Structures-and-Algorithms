@@ -4,7 +4,7 @@ My solutions to coding interview problems on leetcode, educative and other inter
 
 - [ ] Sieve
 - [ ] Catalan Numbers
-- [ ] Sliding Window Technique
+- [X] Sliding Window Technique
 - [ ] Recursion and Backtracking 
 - [ ] Binary Search [(TopCoder)](https://www.topcoder.com/community/competitive-programming/tutorials/binary-search)
 - [ ] BacktoBackSWE Playlist
