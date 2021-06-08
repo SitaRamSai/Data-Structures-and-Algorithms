@@ -1,0 +1,43 @@
+In a Queue we implement a dynamic array and a pointer to maintain the starting index. 
+
+	→ Create a class MyQueue and in this class we will have two variables. List of Integers and a pointer.
+	→ Define the constructor, whenever we call the MyQueue class then the List should be assigned with a new Array List and the index pointer should be assigned with 0;
+	→ So now let's define the methods. First is Enqueue(int x) -> we simply take in the input from the method and add it to the array list. 
+	→ Second is Dequeue() -> In order to implement DeQueue() we first need to define isEmpty() method to check if our list contains any elements or not. 
+	→ So we make use of our index pointer we first defined. So the idea here is to not delete any elements. We just point our first element to the next one by incrementing our pointer. 
+	→ So, whenever our pointer exceeds the size of our list then we know that we don't have any elements in our queue because the pointer starting index is our first element in our queue. 
+	→ So, in our DeQueue() method we check if our queue has any elements then if it has then we simply increment out pointer to the next available element. This way we just popped out the first element. 
+	→ The next method is returning the first element. The method First() will return the first element which we can access by providing the pointer index. 
+
+
+            class MyQueue {
+                // store elements
+                private List<Integer> data;         
+                // a pointer to indicate the start position
+                private int p_start;            
+                public MyQueue() {
+                    data = new ArrayList<Integer>();
+                    p_start = 0;
+                }
+                /** Insert an element into the queue. Return true if the operation is successful. */
+                public boolean enQueue(int x) {
+                    data.add(x);
+                    return true;
+                };    
+                /** Delete an element from the queue. Return true if the operation is successful. */
+                public boolean deQueue() {
+                    if (isEmpty() == true) {
+                        return false;
+                    }
+                    p_start++;
+                    return true;
+                }
+                /** Get the front item from the queue. */
+                public int Front() {
+                    return data.get(p_start);
+                }
+                /** Checks whether the queue is empty or not. */
+                public boolean isEmpty() {
+                    return p_start >= data.size();
+                }     
+            };
