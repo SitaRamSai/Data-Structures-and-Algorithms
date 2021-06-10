@@ -1,0 +1,31 @@
+Trees can be traversed by four ways:
+1) Pre-order Traversal
+2) In-order Traversal
+3) Post-order Traversal
+4) Recursive/Iterative
+
+Pre-order Traversal: In Pre-order Traversal, the root node is visited first, then traverse the left sub tree, finally traverse the right sub tree. 
+
+In order to implement it we need to have two data structures, Stack/LinkedList to keep track of all the nodes, List of Integer to keep track of all the visited nodes. 
+
+  
+    List<Integer> preOrderTraversal(TreeNode root){
+    
+    LinkedList<TreeNode> q = new LinkedList<>(); //This can be replaced by a stack Stack<TreeNode> q = new Stack<>();
+    ArrayList<Integer> output = new ArrayList<>();
+    
+    q.add(root); // q.push(root) in stack
+    
+    if(root == null) return output; 
+    
+    while(!q.isEmpty()){
+    
+    TreeNode curr = q.pollLast();
+    output.add(curr.val);
+    
+    if(curr.left != null) q.add(curr.left);
+    if(curr.right != null) q.add(curr.right);
+    
+    }
+    return output;
+    }
