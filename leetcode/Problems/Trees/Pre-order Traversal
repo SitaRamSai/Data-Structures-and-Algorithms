@@ -9,7 +9,9 @@ Pre-order Traversal: In Pre-order Traversal, the root node is visited first, the
 In order to implement it we need to have two data structures, Stack/LinkedList to keep track of all the nodes, List of Integer to keep track of all the visited nodes. 
 
   
-    List<Integer> preOrderTraversal(TreeNode root){
+  //Iterative
+  
+  List<Integer> preOrderTraversal(TreeNode root){
     
     LinkedList<TreeNode> q = new LinkedList<>(); //This can be replaced by a stack Stack<TreeNode> q = new Stack<>();
     ArrayList<Integer> output = new ArrayList<>();
@@ -28,4 +30,24 @@ In order to implement it we need to have two data structures, Stack/LinkedList t
     
     }
     return output;
+    }
+    
+    
+    
+    //Recursive
+    
+    class Solution{
+    List<Integer> output = new ArrayList<>();
+    
+    List<Integer> preorderTraversal(TreeNode root){
+    
+    if(root != null){
+      output.add(root.val);
+      preorderTraversal(root.left);
+      preorderTraversal(root.right);
+    }
+    return output;
+    
+    }
+    
     }
