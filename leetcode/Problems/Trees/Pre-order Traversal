@@ -23,8 +23,8 @@ In order to implement it we need to have two data structures, Stack/LinkedList t
     TreeNode curr = q.pollLast();
     output.add(curr.val);
     
-    if(curr.left != null) q.add(curr.left);
     if(curr.right != null) q.add(curr.right);
+    if(curr.left != null) q.add(curr.left);
     
     }
     return output;
