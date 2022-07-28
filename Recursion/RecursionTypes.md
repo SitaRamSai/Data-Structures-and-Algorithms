@@ -1,8 +1,8 @@
 ## Types of Recursion
 
-- Recursion is always in two phases, calling phase, returning phase. 
+Recursion is always in two phases, calling phase, returning phase. 
 
-### Tail Recursion
+### 1. Tail Recursion
 
 When the recursion is not having anything do in the returning phase, then it is called as tail recursion. It basically is returning to its main origin without having to perform any operations. 
 
@@ -17,7 +17,7 @@ When the recursion is not having anything do in the returning phase, then it is 
     > 
     > Loop -> O(1)
 
-### Head Recursion
+### 2. Head Recursion
 
 When the function call is the first call it is making without doing any operations, then it is a head recursion.
 
@@ -25,6 +25,6 @@ When the function call is the first call it is making without doing any operatio
 - There has to be a slight modification to acheive loop
 
 
-### Tree Recursion
+### 3. Tree Recursion
 
 
